@@ -19,17 +19,55 @@
 	</div>
 </main> <!-- .cd-main-content -->
 <script>
+	function selectFrom(lowerValue, upperValue) {
+              var choices = upperValue - lowerValue + 1;
+              return Math.floor(Math.random() * choices + lowerValue);
+         }
+         
+       
 	window.onload=function(){
 			// alert('a');
-			$("#ann").click().trigger();
+			// $("#ann").click().trigger();
+			document.querySelector("#ann").click();
+			var tex=document.querySelector("#tee");
+			var t=tex.textContent;
+			var tem=tex.innerHTML;							
+		    var cc=t.split('');
+			tex.textContent='';
+			var i=0,j=0;
+			b = new Array("aliceblue","antiquewhite","aqua","aquamarine","bisque","blueviolet","brown","cadetblue","chartreuse","chocolate","cornflowerblue","cyan","darkcyan","darkgreen","darkmagenta","darkseagreen","darkturquoise","deepskyblue","firebrick","forestgreen","gold","hotpink","khaki","magenta","olive","royalblue","violet","yellowgreen");
+
+			// for (var ii = 0; ii < cc.length; ii++) {
+				// var cr=(document.createElement('span'));
+				// cr.innerHTML=cc[i];
+				// tex.appendChild(cr);
+			// }
+			var num = selectFrom(0, 27);
+			var st= setInterval(function() {
+				
+			// tex.textContent+=cc[i];
+			var cr=(document.createElement('span'));
+				cr.innerHTML=cc[i];
+				num= selectFrom(0, 27);
+				// parseInt(Math.random()*(max+1),10);
+				// Math.floor(Math.random()*(max+1));
+				cr.style.color=b[num];
+				// cr.style.color="rgb("+(30+i*1)+",110,"+(10+i*2)+")";
+				j==6?j=1:j++;
+				// cr.style.color=b[j];
+				tex.appendChild(cr);
+			i==cc.length-1? clearInterval(st):i++;
+			},100);
+			
+			// tex.innerHTML=tem;
+			
 		}
 </script>
 <div class="cd-modal">
 	<div class="modal-content">
 		<h1>潘慧晴's</h1>
 		
-		<p style="text-align: center;">
-			基于社会和时代背景的不断变化，当代青年在人生价值取向上形成具有一-定时代特征的特点，主要表现在: 一、主体意识越来越强烈,注重自我价值实现。
+		<p id="tee" style="text-align: center;display: flex;flex-wrap: wrap;justify-content: space-around;">基于社会和时代背景的不断变化，当代青年在人生价值取向上形成具有一-定时代特征的特点，主要表现在: 一、主体意识越来越强烈,注重自我价值实现。
 二、重功利、讲实惠。学习上的实用至上，择业上金钱至上。三、具有不稳定性和可塑性。主要表现在青年学生这个群体，其人生价值观表现的出不稳定性。
 四、具有多元化和复杂性。当代青年身上，既存在着时代产生的人生价值观，同时又存在传统民族的价值观念。
 		

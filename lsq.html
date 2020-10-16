@@ -20,17 +20,55 @@
 	</div>
 </main> <!-- .cd-main-content -->
 <script>
+	function selectFrom(lowerValue, upperValue) {
+              var choices = upperValue - lowerValue + 1;
+              return Math.floor(Math.random() * choices + lowerValue);
+         }
+         
+       
 	window.onload=function(){
 			// alert('a');
-			$("#ann").click().trigger();
+			// $("#ann").click().trigger();
+			document.querySelector("#ann").click();
+			var tex=document.querySelector("#tee");
+			var t=tex.textContent;
+			var tem=tex.innerHTML;							
+		    var cc=t.split('');
+			tex.textContent='';
+			var i=0,j=0;
+			b = new Array("aliceblue","antiquewhite","aqua","aquamarine","bisque","blueviolet","brown","cadetblue","chartreuse","chocolate","cornflowerblue","cyan","darkcyan","darkgreen","darkmagenta","darkseagreen","darkturquoise","deepskyblue","firebrick","forestgreen","gold","hotpink","khaki","magenta","olive","royalblue","violet","yellowgreen");
+
+			// for (var ii = 0; ii < cc.length; ii++) {
+				// var cr=(document.createElement('span'));
+				// cr.innerHTML=cc[i];
+				// tex.appendChild(cr);
+			// }
+			var num = selectFrom(0, 27);
+			var st= setInterval(function() {
+				
+			// tex.textContent+=cc[i];
+			var cr=(document.createElement('span'));
+				cr.innerHTML=cc[i];
+				num= selectFrom(0, 27);
+				// parseInt(Math.random()*(max+1),10);
+				// Math.floor(Math.random()*(max+1));
+				cr.style.color=b[num];
+				// cr.style.color="rgb("+(30+i*1)+",110,"+(10+i*2)+")";
+				j==6?j=1:j++;
+				// cr.style.color=b[j];
+				tex.appendChild(cr);
+			i==cc.length-1? clearInterval(st):i++;
+			},100);
+			
+			// tex.innerHTML=tem;
+			
 		}
 </script>
 <div class="cd-modal">
 	<div class="modal-content">
 		<h1>刘诗琪's</h1>
 		
-		<p style="text-align: center;">
-			《我和我的家乡》总策划张一白认为，“我们的电影展现的不是英雄，而是平凡的人。”
+		<p id="tee" style="text-align: center;display: flex;flex-wrap: wrap;justify-content: space-around;">《我和我的家乡》总策划张一白认为，“我们的电影展现的不是英雄，而是平凡的人。”
 			导演许宏宇表示，“这部影片并不是告诉大家一定要回到家乡、要去创业才是成功，而是希望每个人在看了这个故事之后能清楚自己心里想做什么，然后坚持下去”。
 			当代青年，最重要的是认清初心，将个人命运同祖国和民族的命运联系在一起，将个人价值最大化。
 			
@@ -62,7 +100,7 @@
 
 		</p>
 	</div> <!-- .modal-content -->
-	<a href="end.html" class="modal-close cd-btn " style="background:url(img/yjt.png) no-repeat;font-size: 20px;">-></a>
+	<a href="hyr.html" class="modal-close cd-btn " style="background:url(img/yjt.png) no-repeat;font-size: 20px;">-></a>
 </div> <!-- .cd-modal -->
 
 <div class="cd-transition-layer"> 
