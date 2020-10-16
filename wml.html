@@ -18,6 +18,22 @@
 		<br><br><br>		
 	</div>
 </main> <!-- .cd-main-content -->
+<style>
+	@keyframes bddd {
+		0%{
+			transform: scale(1) rotate(0deg) translateY(0);
+		}30%{
+			transform: scale(2.5) rotate(90deg) translateY(200px);
+		}60%{
+			transform: scale(0.4) rotate(180deg) translateY(-55px);
+		}
+		80%{
+			transform: scale(3) rotate(300deg) translateY(10px);
+		}100%{
+			transform: scale(1) rotate(360deg) translateY(0);
+		}
+	}
+</style>
 <script>
 	function selectFrom(lowerValue, upperValue) {
               var choices = upperValue - lowerValue + 1;
@@ -52,12 +68,13 @@
 				// parseInt(Math.random()*(max+1),10);
 				// Math.floor(Math.random()*(max+1));
 				cr.style.color=b[num];
+				cr.style.animation='bddd 1.2s 1 linear';
 				// cr.style.color="rgb("+(30+i*1)+",110,"+(10+i*2)+")";
-				j==6?j=1:j++;
+				// j==6?j=1:j++;
 				// cr.style.color=b[j];
 				tex.appendChild(cr);
 			i==cc.length-1? clearInterval(st):i++;
-			},100);
+			},30);
 			
 			// tex.innerHTML=tem;
 			
@@ -69,7 +86,7 @@
 		
 		<p id="tee" style="text-align: center;display: flex;flex-wrap: wrap;justify-content: space-around;">勤奋与有德当伴随终身，古人云：“富贵本无根，尽从勤里得”人是万物之灵，也是高级动物，人最大的弱点就是容易懒惰，一个人一旦懒惰了就会失去人生真正意义上的幸福和快乐，更莫谈过得幸福了。毕竟“一勤天下无难事”。
 			只有有德才能与家人和和谐谐，幸幸福福，人生得圆满不是靠天靠地靠运气，靠的是自己勤奋的双手和一个好德行,
-			独立且清醒，做自己的太阳无须依靠谁的光		
+			独立且清醒，做自己的太阳无须凭借谁的光		
 		</p>
 
 		<!-- <p style="text-align: center;">刷微博 吃外卖</p>

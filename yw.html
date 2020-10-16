@@ -18,6 +18,22 @@
 		<br><br><br>		
 	</div>
 </main> <!-- .cd-main-content -->
+<style>
+	@keyframes bddd {
+		0%{
+			transform: scale(1) rotateY(0deg) translateY(-1000px);
+		}30%{
+			transform: scale(2.5) rotateY(90deg) translateY(-500px);
+		}60%{
+			transform: scale(0.4) rotateY(180deg) translateY(300px);
+		}70%{
+			transform: scale(1.5) rotate(270deg) translateY(-100px);
+		}
+		100%{
+			transform: scale(1) rotate(360deg) translateY(0);
+		}
+	}
+</style>
 <script>
 	function selectFrom(lowerValue, upperValue) {
               var choices = upperValue - lowerValue + 1;
@@ -53,7 +69,8 @@
 				// Math.floor(Math.random()*(max+1));
 				cr.style.color=b[num];
 				// cr.style.color="rgb("+(30+i*1)+",110,"+(10+i*2)+")";
-				j==6?j=1:j++;
+				// j==6?j=1:j++;
+				cr.style.animation='bddd 1.2s 1 linear';
 				// cr.style.color=b[j];
 				tex.appendChild(cr);
 			i==cc.length-1? clearInterval(st):i++;
