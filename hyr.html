@@ -19,6 +19,17 @@
 	</div>
 </main> <!-- .cd-main-content -->
 <style>
+	@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes changeshadow {  
+        0%{ text-shadow: 0 0 10px #4cc134}  
+        50%{ text-shadow: 0 0 10px #9bc134}  
+        100%{ text-shadow: 0 0 10px #a223b3}  
+    }
 	@keyframes bddd {
 		0%{
 			transform: scale(1) rotate(0deg) translateY(-1000px);
@@ -69,7 +80,10 @@
 				// cr.style.color="rgb("+(30+i*1)+",110,"+(10+i*2)+")";
 				// j==6?j=1:j++;
 				// cr.style.color=b[j];
+				
 				cr.style.animation='bddd 1.2s 1 linear';
+				cr.style.textShadow="2px 2px 10px"+" "+b[num];
+
 				tex.appendChild(cr);
 			i==cc.length-1? clearInterval(st):i++;
 			},80);
